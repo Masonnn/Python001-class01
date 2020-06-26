@@ -50,12 +50,12 @@ ROBOTSTXT_OBEY = True
 #TELNETCONSOLE_ENABLED = False
 
 # Override the default request headers:
-DEFAULT_REQUEST_HEADERS = {
-    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-    'Accept-Language': 'en',
-    'cookie': '__mta=244030394.1593073122165.1593103425338.1593103736729.12; uuid_n_v=v1; uuid=7A0F4770B6BC11EAACB6BBD781D899382353DC4B16A84BF9BE532908BC8308DB; _csrf=a42231a2bcccb4006af2825c69d00166c86874f7760aa9513457c336c358b32a; _lxsdk_cuid=172ea8eb9dac8-09d95878794db4-143f6257-13c680-172ea8eb9dbc8; _lxsdk=7A0F4770B6BC11EAACB6BBD781D899382353DC4B16A84BF9BE532908BC8308DB; mojo-uuid=0d93c9cc79709f5864439721bbe5a609; Hm_lvt_703e94591e87be68cc8da0da7cbd0be2=1593073122,1593073140,1593075062,1593173051; mojo-session-id={"id":"ede302d619b016d2f43d31492530700f","time":1593178978743}; mojo-trace-id=1; Hm_lpvt_703e94591e87be68cc8da0da7cbd0be2=1593178979; __mta=244030394.1593073122165.1593103736729.1593178978950.13; _lxsdk_s=172f0ddfa34-886-186-0cd%7C%7C2',
-    'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36'
-}
+# DEFAULT_REQUEST_HEADERS = {
+#     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+#     'Accept-Language': 'en',
+#     'cookie': '__mta=244030394.1593073122165.1593103425338.1593103736729.12; uuid_n_v=v1; uuid=7A0F4770B6BC11EAACB6BBD781D899382353DC4B16A84BF9BE532908BC8308DB; _csrf=a42231a2bcccb4006af2825c69d00166c86874f7760aa9513457c336c358b32a; _lxsdk_cuid=172ea8eb9dac8-09d95878794db4-143f6257-13c680-172ea8eb9dbc8; _lxsdk=7A0F4770B6BC11EAACB6BBD781D899382353DC4B16A84BF9BE532908BC8308DB; mojo-uuid=0d93c9cc79709f5864439721bbe5a609; Hm_lvt_703e94591e87be68cc8da0da7cbd0be2=1593073122,1593073140,1593075062,1593173051; mojo-session-id={"id":"ede302d619b016d2f43d31492530700f","time":1593178978743}; mojo-trace-id=1; Hm_lpvt_703e94591e87be68cc8da0da7cbd0be2=1593178979; __mta=244030394.1593073122165.1593103736729.1593178978950.13; _lxsdk_s=172f0ddfa34-886-186-0cd%7C%7C2',
+#     'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36'
+# }
 
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
