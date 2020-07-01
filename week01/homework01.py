@@ -44,8 +44,6 @@ for tagslevel1 in bs_info.find_all('div', attrs={'class': 'movie-hover-info'}):
                 movie = [film_name, film_genre, play_date]
                 movies.append(movie)
 
-movie1 = pd.DataFrame(data=movies[:10], columns=[
-    'film_name', 'film_genre', 'play_date'])
+movie1 = pd.DataFrame(data=movies[:10], columns=['电影名字', '类型', '上映日期'])
 
-movie1.to_csv('./movie01.csv',
-              encoding='utf8', index=False, header=False)
+movie1.to_csv('./movie01.csv', encoding='utf8', index=False, header=True)
