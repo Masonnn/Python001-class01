@@ -52,14 +52,13 @@ except Exception as e: # 捕获所有异常
 
 * 如何重写下载中间件？
 
-![26851f1356c146efab2ad6f73aed9fbd.png](evernotecid://F481C5C1-AA36-4BAD-9D1F-5C9D27099F65/appyinxiangcom/7433901/ENResource/p380)
+evernotecid://F481C5C1-AA36-4BAD-9D1F-5C9D27099F65/appyinxiangcom/7433901/ENResource/p380
 
 
 
 ### 分布式爬虫
 
-
-![7a32ee3bc26c7f3486e70036196d7dcc.png](evernotecid://F481C5C1-AA36-4BAD-9D1F-5C9D27099F65/appyinxiangcom/7433901/ENResource/p381)
+evernotecid://F481C5C1-AA36-4BAD-9D1F-5C9D27099F65/appyinxiangcom/7433901/ENResource/p381
 
 
 
