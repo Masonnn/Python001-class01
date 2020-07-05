@@ -19,8 +19,7 @@ class MaoyanPipeline:
         play_date = item['play_date']
 
         with open("./maoyanMovie.csv", "a+b") as f:
-            exporter = CsvItemEx
-            porter(f, include_headers_line=False)
+            exporter = CsvItemExporter(f, include_headers_line=False)
             exporter.start_exporting()
             exporter.export_item(item)
             exporter.finish_exporting()
