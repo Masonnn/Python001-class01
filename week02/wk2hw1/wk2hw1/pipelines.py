@@ -29,9 +29,10 @@ class Wk2Hw1Pipeline(object):
             charset='utf8'
         )
         self.cursor = self.connect.cursor()
+        print("===============createTable=================")
+        self.cursor.execute(createTable)
 
     def process_item(self, item, spider):
-        self.cursor.execute(createTable)
         self.cursor.execute(
             """INSERT INTO maoyanMovies (film_name, film_genre, play_date) VALUES (%s, %s, %s)""",
             (item['film_name'], item['film_genre'], item['play_date']))
