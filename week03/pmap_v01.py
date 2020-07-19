@@ -76,10 +76,10 @@ def main():
     results = {}
     if args.f == "tcp":
         for ip in ip_list:
-            data = product([ip], range(1023, 65535))
-            # data = product([ip], range(8000, 8081))
+            # data = product([ip], range(1023, 65535))
+            data = product([ip], range(8000, 8081))
             with Pool(workers) as pool:
-                raw_results = pool.map(ping_port_wrapper, data)
+                raw_results = pool.map(ping_port_wrapper, data)  # 超时时间过长
 
             mid_results = [r for r in raw_results if r is not None]
             if len(mid_results):
