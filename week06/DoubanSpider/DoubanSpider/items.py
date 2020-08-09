@@ -11,4 +11,6 @@ import scrapy
 class DoubanspiderItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    pass
+    film_name = scrapy.Field()
+    film_stars = scrapy.Field()
+    film_shorts = scrapy.Field()

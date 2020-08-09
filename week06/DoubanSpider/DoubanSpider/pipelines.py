@@ -10,7 +10,7 @@ import pymysql
 createTable = """CREATE TABLE IF NOT EXISTS`doubanMovies` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `film_name` varchar(100) NOT NULL,
-  `film_stars` varchar(100) NOT NULL,
+  `film_stars` int(100) NOT NULL,
   `film_shorts` varchar(3000) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;"""
@@ -34,12 +34,10 @@ class DoubanspiderPipeline:
 
     def process_item(self, item, spider):
         self.cursor.execute(
-            """INSERT INTO maoyanMovies (film_name, film_genre, play_date) VALUES (%s, %s, %s)""",
-            (item['film_name'], item['film_genre'], item['play_date']))
+            """INSERT INTO doubanMovies (film_name, film_stars, film_shorts) VALUES (%s, %s, %s)""",
+            (item['film_name'], item['film_stars'], item['film_shorts']))
         self.connect.commit()
         # self.cursor = self.connect.close()
 
         return item
 
-    def process_item(self, item, spider):
-        return item

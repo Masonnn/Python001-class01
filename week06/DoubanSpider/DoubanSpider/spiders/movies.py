@@ -16,7 +16,8 @@ class MoviesSpider(scrapy.Spider):
     #     pass
 
     def start_requests(self):
-        url = 'https://movie.douban.com/explore#!type=movie&tag=%E7%BB%8F%E5%85%B8&sort=recommend&page_limit=20&page_start=0'
+        # url = 'https://movie.douban.com/explore#!type=movie&tag=%E7%BB%8F%E5%85%B8&sort=recommend&page_limit=20&page_start=0'
+        url = 'https://movie.douban.com/subject/30464908/?tag=%E7%83%AD%E9%97%A8&from=gaia'
         yield scrapy.Request(url=url, callback=self.parse)
 
     def parse(self, response):
@@ -26,10 +27,10 @@ class MoviesSpider(scrapy.Spider):
         for movie in movies:
             film_name = movie.xpath('./div[1]/span/text()').extract()
 
-            film_genre = movie.xpath('./div[2]/text()').extract()[1].strip('\n').strip()
-            play_date = movie.xpath('./div[4]/text()').extract()[1].strip('\n').strip()
+            film_stars = movie.xpath('./div[2]/text()').extract()[1].strip('\n').strip()
+            film_shorts = movie.xpath('./div[4]/text()').extract()[1].strip('\n').strip()
             item['film_name'] = film_name
-            item['play_date'] = play_date
-            item['film_genre'] = film_genre
+            item['film_stars'] = film_stars
+            item['film_shorts'] = film_shorts
 
             yield item
