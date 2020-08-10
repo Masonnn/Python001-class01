@@ -16,7 +16,6 @@ from abc import ABCMeta, abstractmethod
 
 
 class Animal(metaclass=ABCMeta):
-    ferocious_animal = False  # 凶猛动物
 
     @abstractmethod
     def __init__(self, animal_type, size, disposition):
@@ -68,5 +67,3 @@ if __name__ == '__main__':
     z.add_animal(cat1)
     # 动物园是否有猫这种动物
     have_cat = getattr(z, 'Cat')
-
-    a = Animal()
