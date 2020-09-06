@@ -1,0 +1,17 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>手机舆情</title>
+</head>
+<body>
+
+{% for comment in comments %}
+<div>名称: {{ comment.prd_name }} <br>
+    链接: {{ comment.link }} <br>
+    评论: {{ comment.comments }} <br>
+    情感分析: {{comment.sentiments}}
+</div>
+{% endfor %}
+</body>
+
+
