@@ -14,5 +14,6 @@ class SpidersItem(scrapy.Item):
     # pass
 
     prd_name = scrapy.Field()
+    prd_id = scrapy.Field()
     link = scrapy.Field()
     comments = scrapy.Field()

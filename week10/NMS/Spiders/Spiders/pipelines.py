@@ -13,11 +13,11 @@ class SpidersPipeline:
     # return item
 
     def process_item(self, item, spider):
-        print("=================== process_item in pipeline =======================")
         prd_name = item['prd_name']
+        prd_id = item['prd_id']
         link = item['link']
         comments = item['comments']
-        output = f'|{prd_name}|\t|{link}|\t|{comments}|\n\n'
+        output = f'|{prd_name}|\t{prd_id}|\t|{link}|\t|{comments}|\n\n'
         with open('./phone.txt', 'a+', encoding='utf-8') as article:
             article.write(output)
 
@@ -45,8 +45,8 @@ class ToMysql(object):
     def process_item(self, item, spider):
         try:
             self.cursor.execute(
-                """INSERT INTO phones (prd_name, link, comments) VALUES (%s, %s, %s)""",
-                (item['prd_name'], item['link'], item['comments']))
+                """INSERT INTO phones (prd_name, prd_id, link, comments) VALUES (%s, %s, %s, %s)""",
+                (item['prd_name'], item['prd_id'], item['link'], item['comments']))
             # self.cursor.close()
             self.connect.commit()
         except Exception as e:
